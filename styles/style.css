@@ -1,26 +1,15 @@
 .page {
+  display: flex;
   min-width: 1100px;
   max-width: 1600px;
   margin: 0 auto;
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  overflow-x: hidden;
+  overflow: hidden;
+  flex-direction: column;
 }
 /*..............общие стили...............*/
-p,h1,h2,h3 {
-  z-index: 1;
-  margin: 0;
-  padding: 0;
-
-}
-.image {
-  width: 100%;
-}
-
-.flex {
-  display: flex;
-}
-
 .logo {
+  display: flex;
   z-index: 2;
 }
 
@@ -30,16 +19,19 @@ p,h1,h2,h3 {
 }
 
 .section-title {
+  padding: 0;
+  margin: 0;
+  display: flex;
   justify-content: center;
-}
-
-.section-title_content {
   font-size: 60px;
   line-height: 1.15;
   font-weight: bold;
 }
 
 .section-subtitle {
+  padding: 0;
+  margin: 0;
+  display: flex;
   justify-content: center;
   font-size: 24px;
   line-height: 34px;
@@ -47,32 +39,41 @@ p,h1,h2,h3 {
 }
 
 .table {
+  display: flex;
   width: 1100px;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .cell {
+  display: flex;
   flex-wrap: wrap;
   flex-direction: column;
 }
 
 .heading {
+  margin: 0;
+  padding: 0;
+  display: flex;
   font-size: 24px;
   line-height: 1.15;
   font-weight: bold;
   margin-bottom: 20px;
+  z-index: 1;
 }
 
 .text {
+  margin: 0;
+  padding: 0;
+  display: flex;
   font-size: 18px;
   line-height: 1.2;
   font-weight: normal;
+  z-index: 1;
 }
-
-/* ..............частные стили................. */
 /* ..............стили header.................. */
 .header {
+  display: flex;
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
@@ -80,7 +81,7 @@ p,h1,h2,h3 {
   position: relative;
 }
 
-.place_header {
+.logo__place_header {
   position: absolute;
   width: 183px;
   height: 32px;
@@ -89,17 +90,20 @@ p,h1,h2,h3 {
 }
 
 .header__title {
+  display: flex;
+  margin: 0;
+  padding: 0;
   z-index: 3;
   padding-left: 64px;
   width: 730px;
   align-items: center;
-}
-.header__title_content {
   font-size: 102px;
   line-height: 96px;
   font-weight: bold;
 }
+
 .header__subtitle {
+  display: flex;
   position: absolute;
   z-index: 3;
   width: 388px;
@@ -110,21 +114,25 @@ p,h1,h2,h3 {
   font-weight: normal;
 }
 
-.link__header_subtitle {
+.header__link {
   color: #2f80ed;
   text-decoration: none;
 }
 
  .header__main-illustration {
+  display: flex;
   width: 765px;
   height: 608px;
   position: absolute;
   right: 0;
   bottom: 0;
   z-index: 1;
+  background-image: url(../images/header-image.png);
+  background-size: cover;
 }
 
  .header__square-pic {
+  display: flex;
   position: absolute;
   right: 0px;
   top: 64px;
@@ -137,27 +145,28 @@ p,h1,h2,h3 {
 /* ..................стили description................. */
 
 .description {
+  display: flex;
   padding-top: 100px;
 }
 
 .two-columns {
+  display: flex;
   justify-content: space-between;
   width: 80%;
   margin: 100px auto;
 }
 
 .two-colums__brief {
+  display: flex;
   width: 175px;
   color: #2f80ed;
-}
-
-.description__title {
   font-size: 18px;
   line-height: 1.2;
   font-weight: normal;
 }
 
 .two-columns__main-text {
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-width: 784px;
@@ -166,6 +175,7 @@ p,h1,h2,h3 {
 }
 
 .two-colums__paragraf {
+  display: flex;
   font-size: 23px;
   line-height: 34px;
   font-weight: normal;
@@ -183,6 +193,7 @@ p,h1,h2,h3 {
 /* .........................стили digits...................... */
 
 .digits {
+  display: flex;
   padding: 100px 0;
   flex-direction: column;
   justify-content: space-between;
@@ -216,6 +227,7 @@ p,h1,h2,h3 {
 }
 /* ......................стили feynman..................... */
 .feynman{
+  display: flex;
   background-image: url(../images/feynman.png);
   background-repeat: no-repeat;
   background-position: 0% 100%;
@@ -227,31 +239,29 @@ p,h1,h2,h3 {
 }
 
 .feynman__title {
+  display: flex;
   margin: 0 auto;
   width: 648px;
   text-align: center;
-}
-.feynman__title_content {
   font-size: 120px;
   line-height: 1.15;
   font-weight: bold;
 }
 
 .feynman__subtitle {
+  display: flex;
   margin: 70px auto 0;
-
-}
-.feynman__subtitle_content {
   font-size: 36px;
   line-height: 51px;
   font-weight: normal;
+
 }
+
 .feynman__link {
+  display: flex;
   position: absolute;
   top: 50%;
   right: 48px;
-}
-.feynman__link_content {
   color: #2f80ed;
   text-decoration: none;
   font-size: 36px;
@@ -261,6 +271,7 @@ p,h1,h2,h3 {
 
 /* .......................стили kaufman.......................... */
 .kaufman {
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
@@ -286,70 +297,76 @@ p,h1,h2,h3 {
 }
 
 .kaufman__trangle {
+  display: flex;
   z-index: 0;
   position: absolute;
-  right: -210px;
+  right: -200px;
   top: 0%;
   width: 877px;
   height: 877px;
 }
 /* ......................стили footer...................... */
 .footer {
+  display: flex;
   min-height: 350px;
   padding: 60px 0 40px;
 }
 
 .footer__columns {
-  height: 350px;
+  display: flex;
   width: 90%;
   margin: 0 auto;
   justify-content: space-between;
 }
 
 .footer__column_content_copirayt {
+  display: flex;
   padding: 0;
   width: 50%;
   flex-basis: 711px;
   position: relative;
 }
 
-.place_footer {
+.logo__place_footer {
+  display: flex;
   width: 183px;
   height: 35px;
 }
 
 .footer__author {
+  display: flex;
   padding: 16px 0;
   position: absolute;
   bottom: 0%;
   left: 0%;
-}
-
-.author {
   font-size: 18px;
   line-height: 25px;
   font-weight: normal;
 }
 
-.footer__column {
+.footer__column_content_info {
+  display: flex;
   flex-direction: column;
 }
 
 .footer__column-heading {
+  display: flex;
   margin-bottom: 20px;
 }
 .footer__title {
+  display: flex;
   font-size: 18px;
   line-height: 30px;
   font-weight: bold;
 }
 
 .footer__column-links {
+  display: flex;
   flex-direction: column;
   padding-bottom: 16px;
 }
 
-.footer__link {
+.footer__column-link {
   font-size: 18px;
   line-height: 30px;
   font-weight: normal;
@@ -357,6 +374,14 @@ p,h1,h2,h3 {
   text-decoration: none;
 }
 
+.footer__column_content_social {
+  display: flex;
+  flex-direction: column;
+}
+
 .footer__social-icon {
+  width: 16px;
+  height: 16px;
   margin-right: 10px;
+  margin-top: 6px;
 }
